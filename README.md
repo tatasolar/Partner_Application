@@ -7,7 +7,7 @@ are `index.html` and `tata-power-logo.svg`.
 
 Upload the contents of this folder to the publishing root (or publish the
 folder from a branch/workflow). Ensure both files are in the same directory.
-The page calls `https://partner.tatapower.solar/api`; the API must have a valid
+The page calls the API must have a valid
 TLS certificate and allow this site's origin in `CORS_ORIGINS`.
 
 For a different backend domain, change the non-local `API_BASE_URL` in
