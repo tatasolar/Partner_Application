@@ -297,7 +297,7 @@
           <div class="brand"><img class="brand-logo" src="tata-power-logo.svg" alt="Tata Power Solar"></div>
           <span id="headerBadge" class="badge">Official Application</span>
         </div>
-        <h1 id="pageTitle">Channel Partner Registration Form</h1>
+        <h1 id="pageTitle">Channel Partner | Distributor Registration Form</h1>
         <p id="pageSubtitle" class="subtitle">West Bengal Network Expansion Drive | Government Registered Franchise Program</p>
         <div id="applicationHighlights" class="highlight-banner">
           <div class="highlight-item"><div class="highlight-value">0%</div><div class="highlight-label">Down Payment</div></div>
@@ -404,7 +404,7 @@
           <span class="step"><span class="step-number">3</span> Submission</span>
         </div>
         <div class="fee-card">
-          <div><div class="fee-title">Channel Partner Application Fee</div><div class="fee-caption">One-time fee · Payable via UPI</div></div>
+          <div><div class="fee-title">Channel Partner | Distributor Application Fee</div><div class="fee-caption">One-time fee · Payable via UPI</div></div>
           <div id="feeAmount" class="fee-amount">₹299</div>
         </div>
         <div class="pay-grid">
@@ -503,7 +503,7 @@
         </div>
       </section>
 
-          <footer class="footer"><strong>Tata Power Solar Systems Limited</strong> · Official Channel Partner Onboarding Form<br>Applications are processed in coordination with West Bengal regional representatives. · <a href="?admin=1">Admin review</a></footer>
+          <footer class="footer"><strong>Tata Power Solar Systems Limited</strong> · Official Channel Partner | Distributor Onboarding Form<br>Applications are processed in coordination with West Bengal regional representatives. · <a href="?admin=1">Admin review</a></footer>
     </article>
   </main>
   <div id="errorOverlay" class="error-overlay hidden" role="alertdialog" aria-modal="true" aria-labelledby="errorTitle">
@@ -793,9 +793,9 @@
 
     function renderSuccess(receipt) {
       $("applicationReference").textContent = receipt.reference_no;
-      $("receiptApplicant").textContent = receipt.applicant_name || "Channel Partner applicant";
+      $("receiptApplicant").textContent = receipt.applicant_name || "Channel Partner | Distributor applicant";
       $("receiptUtr").textContent = receipt.payment_utr || "Confirmed by administrator";
-      const message = encodeURIComponent(`Hello, my Tata Power Solar Channel Partner application ${receipt.reference_no} has been submitted. Please contact me with an update.`);
+      const message = encodeURIComponent(`Hello, my Tata Power Solar Channel Partner | Distributor application ${receipt.reference_no} has been submitted. Please contact me with an update.`);
       $("whatsappReceipt").href = `https://wa.me/919635215960?text=${message}`;
       sessionStorage.setItem(receiptKey, JSON.stringify(receipt));
       sessionStorage.removeItem(currentPaymentKey);
@@ -804,7 +804,7 @@
     }
 
     function supportLink() {
-      const text = encodeURIComponent("Hello, I need help with my Channel Partner application payment.");
+      const text = encodeURIComponent("Hello, I need help with my Channel Partner | Distributor application payment.");
       $("failedWhatsapp").href = `https://wa.me/919635215960?text=${text}`;
     }
 
@@ -975,7 +975,7 @@
         sessionStorage.removeItem(adminTokenKey);
         $("adminPanel").classList.add("hidden");
         $("adminLogin").classList.remove("hidden");
-        showView("applicationView", "Channel Partner Registration Form", "West Bengal Network Expansion Drive | Government Registered Franchise Program", "Official Application");
+        showView("applicationView", "Channel Partner | Distributor Registration Form", "West Bengal Network Expansion Drive | Government Registered Franchise Program", "Official Application");
       });
       $("paymentsTable").addEventListener("click", (event) => {
         const button = event.target.closest("button[data-action]");
@@ -1010,7 +1010,7 @@
         }
       }
       if (!(await restorePayment())) {
-        showView("applicationView", "Channel Partner Registration Form", "West Bengal Network Expansion Drive | Government Registered Franchise Program", "Official Application");
+        showView("applicationView", "Channel Partner | Distributor Registration Form", "West Bengal Network Expansion Drive | Government Registered Franchise Program", "Official Application");
       }
     }
 
